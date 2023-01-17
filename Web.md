@@ -2,7 +2,7 @@
 ## 1.Hi Hi Hi
     http://146.190.115.228:20109
 ### Solution:
-+ Mình nhập thử text `hacked` thì thấy hiện trên Dom nên mình đoán có thể là lỗi xss_dom_based:
++ Mình nhập thử text `hacked` thì thấy hiện trên Dom nên mình đoán có thể là lỗi reflect:
 + 
 ![alt](https://scontent.xx.fbcdn.net/v/t1.15752-9/325544380_1539785776490524_506576420518357102_n.png?stp=dst-png_p403x403&_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_ohc=mxRJjvm2h5sAX-IFnMw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdShnEbKx5Gp4lBumSBFoVxAwb74bLspb0fMNVfKDYhvdw&oe=63EDEAC8)
 + Mình thử nhập `<script>alert(10)</script>` thì bị filter:
